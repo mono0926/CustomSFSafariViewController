@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P4F-Ib-B72">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="o0I-is-UHA">
+            <objects>
+                <navigationController id="P4F-Ib-B72" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uIr-dS-9Aq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="faf-Rq-CHR" kind="relationship" relationship="rootViewController" id="jw6-ji-Oi9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s33-DD-dyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-415" y="26"/>
+        </scene>
+        <!--実は中身はSFSafariViewController-->
+        <scene sceneID="mBz-xD-fs3">
+            <objects>
+                <viewController id="faf-Rq-CHR" customClass="ViewController" customModule="CustomSFSafariViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vUx-Kc-rUX"/>
+                        <viewControllerLayoutGuide type="bottom" id="9W8-rb-dhn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eqB-Tb-8Tf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-zC-GIY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="QiitaなどのHTTPのサイトも何も設定せずに表示可能(　´･‿･｀)🐶" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Lp-mP-5kV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mne-dV-LzS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="G4g-kN-Rqk">
+                                        <rect key="frame" x="0.0" y="559" width="375" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPB-4h-bRg">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                                                <color key="backgroundColor" red="0.42745098040000001" green="0.75686274509999996" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Aボタン">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonDidTap:" destination="faf-Rq-CHR" eventType="touchUpInside" id="uj5-hq-ZYK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05N-cX-hOh">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                                                <color key="backgroundColor" red="0.95686274510000002" green="0.41568627450000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Bボタン">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonDidTap:" destination="faf-Rq-CHR" eventType="touchUpInside" id="br6-KY-lKb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="9Zu-4C-oLV"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vfp-zC-GIY" firstAttribute="leading" secondItem="eqB-Tb-8Tf" secondAttribute="leading" id="Qat-Wv-4dT"/>
+                            <constraint firstItem="9W8-rb-dhn" firstAttribute="top" secondItem="vfp-zC-GIY" secondAttribute="bottom" id="fTj-UW-qru"/>
+                            <constraint firstItem="vfp-zC-GIY" firstAttribute="top" secondItem="vUx-Kc-rUX" secondAttribute="bottom" id="gCu-6W-1h6"/>
+                            <constraint firstAttribute="trailing" secondItem="vfp-zC-GIY" secondAttribute="trailing" id="nji-z9-gFV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="実は中身はSFSafariViewController" id="6GC-19-Vyn"/>
+                    <connections>
+                        <outlet property="containerView" destination="Mne-dV-LzS" id="jKr-wu-9g3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJA-sk-biP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="25.637181409295355"/>
+        </scene>
+    </scenes>
+</document>
